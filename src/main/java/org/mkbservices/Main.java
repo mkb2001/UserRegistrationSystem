@@ -1,6 +1,7 @@
 package org.mkbservices;
 
 import java.util.Scanner;
+
 //
 public class Main {
     private static UserServiceImplementation userService = null;
@@ -8,9 +9,10 @@ public class Main {
     public Main(UserServiceImplementation userService) {
         Main.userService = userService;
     }
+
     // this is my entry point
     public static void main(String[] args) {
-        while (true){
+        while (true) {
             // this is the menu.
             System.out.println("Welcome back, Please login to proceed");
             System.out.println("1 - Add user");
@@ -23,7 +25,7 @@ public class Main {
             Scanner scan = new Scanner(System.in);
             int option = scan.nextInt();
             // this is the switch statement which will help us to navigate through the menu
-            switch (option){
+            switch (option) {
                 case 1:
                     System.out.println("Soon");
                 case 2:
