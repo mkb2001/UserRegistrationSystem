@@ -80,4 +80,16 @@ public class UserModel {
         UserModel user = new UserModel(firstName, lastName, DOB, username);
         users.add(user);
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "UserModel{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", DOB='" + DOB + '\'' +
+                ", username='" + username + '\'' +
+                ", age=" + age +
+                '}';
+    }
+    
 }
