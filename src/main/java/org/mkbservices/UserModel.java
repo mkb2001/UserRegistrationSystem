@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 //this is the model class
 public class UserModel {
@@ -91,5 +92,17 @@ public class UserModel {
                 ", age=" + age +
                 '}';
     }
-    
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UserModel userModel = (UserModel) o;
+        return Objects.equals(firstName, userModel.firstName) && Objects.equals(lastName, userModel.lastName) && Objects.equals(DOB, userModel.DOB) && Objects.equals(username, userModel.username) && Objects.equals(age, userModel.age);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, DOB, username, age);
+    }
 }
