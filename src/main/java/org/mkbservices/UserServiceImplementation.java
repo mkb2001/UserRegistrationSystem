@@ -2,6 +2,7 @@ package org.mkbservices;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 // this is the implementation of the service class
 public class UserServiceImplementation implements UserService {
