@@ -1,7 +1,6 @@
 package org.mkbservices.models;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Date;
 import java.util.Objects;
 
 //this is the model class
@@ -9,12 +8,12 @@ public class UserModel {
     // these are the fields
     private String firstName;
     private String lastName;
-    private String dateOfBirth;
+    private Date dateOfBirth;
     private String username;
     private Integer age;
 
     // this is the constructor
-    public UserModel(String firstName, String lastName, String dateOfBirth, String username) {
+    public UserModel(String firstName, String lastName, Date dateOfBirth, String username) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
@@ -43,11 +42,11 @@ public class UserModel {
         this.lastName = lastName;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -65,7 +64,7 @@ public class UserModel {
 
     // this is the setter for the age
     public void setAge(Integer age) {
-
+            this.age = age;
     }
 
     @Override
