@@ -1,10 +1,8 @@
-package org.mkbservices;
+package org.mkbservices.models;
 
-import javax.swing.text.DateFormatter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -70,16 +68,7 @@ public class UserModel {
 
     // this is the setter for the age
     public void setAge(Integer age) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDateTime localDateTime = LocalDateTime.parse(this.DOB, formatter);
-        int year = localDateTime.getYear();
-        this.age = LocalDateTime.now().getYear() - year;
-    }
 
-    // this is the method that will add the user to the list
-    public static void addUser(String firstName, String lastName, String DOB, String username) {
-        UserModel user = new UserModel(firstName, lastName, DOB, username);
-        users.add(user);
     }
 
     @Override
