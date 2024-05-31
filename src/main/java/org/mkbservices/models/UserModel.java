@@ -1,7 +1,5 @@
 package org.mkbservices.models;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -11,16 +9,15 @@ public class UserModel {
     // these are the fields
     private String firstName;
     private String lastName;
-    private String DOB;
+    private String dateOfBirth;
     private String username;
     private Integer age;
-    public static List<UserModel> users = new ArrayList<>();
 
     // this is the constructor
-    public UserModel(String firstName, String lastName, String DOB, String username) {
+    public UserModel(String firstName, String lastName, String dateOfBirth, String username) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.DOB = DOB;
+        this.dateOfBirth = dateOfBirth;
         this.username = username;
     }
 
@@ -46,12 +43,12 @@ public class UserModel {
         this.lastName = lastName;
     }
 
-    public String getDOB() {
-        return DOB;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setDOB(String DOB) {
-        this.DOB = DOB;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getUsername() {
@@ -76,7 +73,7 @@ public class UserModel {
         return "UserModel{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", DOB='" + DOB + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", username='" + username + '\'' +
                 ", age=" + age +
                 '}';
@@ -87,11 +84,11 @@ public class UserModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserModel userModel = (UserModel) o;
-        return Objects.equals(firstName, userModel.firstName) && Objects.equals(lastName, userModel.lastName) && Objects.equals(DOB, userModel.DOB) && Objects.equals(username, userModel.username) && Objects.equals(age, userModel.age);
+        return Objects.equals(firstName, userModel.firstName) && Objects.equals(lastName, userModel.lastName) && Objects.equals(dateOfBirth, userModel.dateOfBirth) && Objects.equals(username, userModel.username) && Objects.equals(age, userModel.age);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, DOB, username, age);
+        return Objects.hash(firstName, lastName, dateOfBirth, username, age);
     }
 }
